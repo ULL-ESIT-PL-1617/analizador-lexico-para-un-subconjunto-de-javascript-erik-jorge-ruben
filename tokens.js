@@ -45,9 +45,17 @@ String.prototype.tokens = function () {
     
     
     ////// Expresiones regulares
-    
-    
+    var WHITES = /\s+/g;
+    var ID = /[a-zA-Z_]\w*/g;
+    var STRING = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;
+    var ONELINECOMMENT = /\/\/.*/g;
+    var MULTIPLELINECOMMENT = /\/[*](.|\n)*[*]/g;
+    var TWOCHAROPERATORS = /(===|!==|[+][+=]|-[-=]|[*]=|%=|\/=|!=|=[=<>]|&&|\|\|)/g;
+    var ONECHAROPERATORS = /([-+*%\/=()&|;:,<>{}[\]])/g;
     //////
+    
+    var tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, 
+                  MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
 
     var make = function (type, value) {
 
