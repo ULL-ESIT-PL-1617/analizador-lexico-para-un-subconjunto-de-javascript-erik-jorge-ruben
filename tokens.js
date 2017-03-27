@@ -22,7 +22,14 @@
 
 /*jslint this */
 
-String.prototype.tokens = function (prefix, suffix) {
+RegExp.prototype.bexec = function(str) {
+  var i = this.lastIndex;
+  var m = this.exec(str);
+  if (m && m.index == i) return m;
+  return null;
+}
+
+String.prototype.tokens = function () {
     //'use strict';
     //var c;                      // The current character.
     var from;                   // The index of the start of the token.
