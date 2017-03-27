@@ -47,6 +47,7 @@ String.prototype.tokens = function () {
     ////// Expresiones regulares
     var WHITES = /\s+/g;
     var ID = /[a-zA-Z_]\w*/g;
+    var NUM = /\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g;
     var STRING = /('(\\.|[^'])*'|"(\\.|[^"])*")/g;
     var ONELINECOMMENT = /\/\/.*/g;
     var MULTIPLELINECOMMENT = /\/[*](.|\n)*[*]/g;
