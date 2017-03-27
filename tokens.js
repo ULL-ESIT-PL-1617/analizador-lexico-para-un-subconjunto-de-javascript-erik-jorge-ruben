@@ -23,16 +23,24 @@
 /*jslint this */
 
 String.prototype.tokens = function (prefix, suffix) {
-    'use strict';
-    var c;                      // The current character.
+    //'use strict';
+    //var c;                      // The current character.
     var from;                   // The index of the start of the token.
     var i = 0;                  // The index of the current character.
-    var length = this.length;
-    var n;                      // The number value.
-    var q;                      // The quote character.
-    var str;                    // The string value.
+    //var length = this.length;
+     var n;                      // The number value.
+     var m;                     // Matching
+    // var q;                      // The quote character.
+    // var str;                    // The string value.
 
     var result = [];            // An array to hold the results.
+    
+    
+    
+    ////// Expresiones regulares
+    
+    
+    //////
 
     var make = function (type, value) {
 
