@@ -70,6 +70,13 @@ String.prototype.tokens = function () {
         };
     };
 
+    var getTok = function() {
+      var str = m[0];
+      i += str.length; // Warning! side effect on i
+      return str;
+    };
+
+///////////////////////////////////////////////////////////////////
 // Begin tokenization. If the source string is empty, return nothing.
 
     if (!this) {
