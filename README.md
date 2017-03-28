@@ -19,7 +19,7 @@ tokens.js produces an array of token objects from a string.
 
 ***
 
-#Práctica 5: Analizador Léxico para Un Subconjunto de JavaScript Taller
+# Práctica 5: Analizador Léxico para Un Subconjunto de JavaScript Taller
 
 
 [Descripción de la práctica](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaanalisislexicotdop.html#recursos)
