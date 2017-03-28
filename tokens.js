@@ -81,9 +81,37 @@ String.prototype.tokens = function () {
     if (!this) return;
     
     while (i < this.length){
-        
+        tokens.forEach(function(t){ t.lastIndex = i;});
+        from = i;
+        if ( m = WHITES.bexec(this) || (m = ONELINECOMMENT.bexec(this)) 
+                    ||( m = MULTIPLELINECOMMENT.bexec(this))) {getTok(); }
+                    
+        else if (m = ID.bexec(this)) {
+            result.push(make('name', getTok()));
+        }
+        else if(m = NUM.bexec(this)) {
+            n = +getTok();
+            if(isFinite(n)){
+                result.push(make('number', n));
+            }
+            else {
+                make('number', m[0]).error("Bad number");
+            }
+        }
+        else if ( m = STRING.bexec(this)){
+            result.push(make('string', getTok().replace(/^["']|["']$/g,'')));
+        }
+        else if(m = TWOCHAROPERATORS.bexec(this)) {
+            result.push(make('operator', getTok()));
+        }
+        else if (m = ONECHAROPERATORS.bexec(this)){
+            result.push(make('operator', getTok()));
+        }
+        else {
+            throw "SyntaxError near '"+ this.substr(i)+"'";
+        }
     }
-    
+    return result
     
 };
 /*//////////////////////////////////////////////////////////////////
