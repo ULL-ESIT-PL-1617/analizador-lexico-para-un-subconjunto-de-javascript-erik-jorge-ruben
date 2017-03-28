@@ -75,8 +75,18 @@ String.prototype.tokens = function () {
       i += str.length; // Warning! side effect on i
       return str;
     };
+    
+    // Begin tokenization. If the source string is empty, return nothing.
 
-///////////////////////////////////////////////////////////////////
+    if (!this) return;
+    
+    while (i < this.length){
+        
+    }
+    
+    
+};
+/*//////////////////////////////////////////////////////////////////
 // Begin tokenization. If the source string is empty, return nothing.
 
     if (!this) {
@@ -299,5 +309,5 @@ String.prototype.tokens = function () {
         }
     }
     return result;
-};
+};*/
 
