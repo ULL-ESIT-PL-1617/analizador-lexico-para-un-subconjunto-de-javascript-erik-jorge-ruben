@@ -1,0 +1,747 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ExpressValidator · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="auth.html" />
+    
+    
+    <link rel="prev" href="sessions.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Cap1/GitBook.html">
+            
+                <a href="../Cap1/GitBook.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Cap2/Markdown.html">
+            
+                <a href="../Cap2/Markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cap3/Nodejs.html">
+            
+                <a href="../Cap3/Nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Cap4/Git-GitHub.html">
+            
+                <a href="../Cap4/Git-GitHub.html">
+            
+                    
+                    Git/GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Cap5/Atom.html">
+            
+                <a href="../Cap5/Atom.html">
+            
+                    
+                    Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Cap6/Cloud9.html">
+            
+                <a href="../Cap6/Cloud9.html">
+            
+                    
+                    Cloud 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Cap7/Pandoc.html">
+            
+                <a href="../Cap7/Pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cap8/basic.html">
+            
+                <a href="../Cap8/basic.html">
+            
+                    
+                    Direccionamiento Básico
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Cap9/routing.html">
+            
+                <a href="../Cap9/routing.html">
+            
+                    
+                    Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Cap10/middle.html">
+            
+                <a href="../Cap10/middle.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Cap10/mw_aplicacion.html">
+            
+                <a href="../Cap10/mw_aplicacion.html">
+            
+                    
+                    Middleware de nivel de aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Cap10/mw_direccionador.html">
+            
+                <a href="../Cap10/mw_direccionador.html">
+            
+                    
+                    Middleware de nivel de direccionador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Cap10/mw_errores.html">
+            
+                <a href="../Cap10/mw_errores.html">
+            
+                    
+                    Middleware de manejo de errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Cap10/mw_incorporado.html">
+            
+                <a href="../Cap10/mw_incorporado.html">
+            
+                    
+                    Middleware incorporado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Cap10/mw_terceros.html">
+            
+                <a href="../Cap10/mw_terceros.html">
+            
+                    
+                    Middleware de terceros
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Cap11/routing-api.html">
+            
+                <a href="../Cap11/routing-api.html">
+            
+                    
+                    Express API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Cap12/cookie-parser.html">
+            
+                <a href="../Cap12/cookie-parser.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="sessions.html">
+            
+                <a href="sessions.html">
+            
+                    
+                    Sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="Express-Validator_Express-Session.html">
+            
+                <a href="Express-Validator_Express-Session.html">
+            
+                    
+                    ExpressValidator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="auth.html">
+            
+                <a href="auth.html">
+            
+                    
+                    Session Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ExpressValidator</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="express-validator">Express-Validator</h1>
+<h2 id="instalaci&#xF3;n">Instalaci&#xF3;n</h2>
+<pre><code class="lang-shell">$ npm install express-validator
+</code></pre>
+<h2 id="&#xBF;c&#xF3;mo-se-usa">&#xBF;C&#xF3;mo se usa?</h2>
+<p>En primar lugar debemos iniciar express-validator en un objeto JS.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> util = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;util&apos;</span>),
+bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;body-parser&apos;</span>),
+express = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express&apos;</span>),
+expressValidator = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-validator&apos;</span>),
+app = express();
+</code></pre>
+<p>A continuaci&#xF3;n debemos a&#xF1;adir que vamos a utilizar el bodyParser.</p>
+<pre><code class="lang-javascript">app.use(bodyParser.json());
+<span class="hljs-comment">// Esta l&#xED;nea va inmediatamente despu&#xE9;s de cada middleware de bodyParser.</span>
+app.use(expressValidator([options]));
+</code></pre>
+<p>Ahora vamos a ver c&#xF3;mo se realiza la validaci&#xF3;n de una petici&#xF3;n.</p>
+<ul>
+<li>checkBody s&#xF3;lo comprueba req.body; Ninguno de los otros par&#xE1;metros req.</li>
+<li>Similarmente, checkParams s&#xF3;lo comprueba en req.params (par&#xE1;metros de URL).</li>
+<li>checkQuery s&#xF3;lo comprueba req.query (GET params).</li>
+</ul>
+<pre><code class="lang-javascript">app.post(<span class="hljs-string">&apos;/:urlparam&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  req.checkBody(<span class="hljs-string">&apos;postparam&apos;</span>, <span class="hljs-string">&apos;Invalid postparam&apos;</span>).notEmpty().isInt();
+  req.checkParams(<span class="hljs-string">&apos;urlparam&apos;</span>, <span class="hljs-string">&apos;Invalid urlparam&apos;</span>).isAlpha();
+  req.checkQuery(<span class="hljs-string">&apos;getparam&apos;</span>, <span class="hljs-string">&apos;Invalid getparam&apos;</span>).isInt();
+  <span class="hljs-comment">// ... m&#xE1;s abajo </span>
+}
+</code></pre>
+<p>Tambi&#xE9;n podemos encontrar el par&#xE1;metro relevante para todas las &#xE1;reas.</p>
+<pre><code class="lang-javascript">    <span class="hljs-comment">// ...    </span>
+    req.sanitize(<span class="hljs-string">&apos;postparam&apos;</span>).toBoolean();
+    <span class="hljs-comment">// ...</span>
+</code></pre>
+<p>Acabemos mostrando el resultado de la validaci&#xF3;n.</p>
+<pre><code class="lang-javascript">  req.getValidationResult().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+      <span class="hljs-keyword">if</span> (!result.isEmpty()) {
+        res.send(<span class="hljs-string">&apos;There have been validation errors: &apos;</span> + util.inspect(result.array()), <span class="hljs-number">400</span>);
+        <span class="hljs-keyword">return</span>;
+      }
+      res.json({
+        urlparam: req.params.urlparam,
+        getparam: req.params.getparam,
+        postparam: req.params.postparam
+      });
+    });
+}
+</code></pre>
+<p>Veamos ahora lo que ocurrir&#xED;a si ejecutamos unas peticiones:</p>
+<pre><code class="lang-shell">$ curl -d &apos;postparam=1&apos; http://localhost:8888/test?getparam=1
+{&quot;urlparam&quot;:&quot;test&quot;,&quot;getparam&quot;:&quot;1&quot;,&quot;postparam&quot;:true}
+
+$ curl -d &apos;postparam=1&apos; http://localhost:8888/t1est?getparam=1
+There have been validation errors: [
+  { param: &apos;urlparam&apos;, msg: &apos;Invalid urlparam&apos;, value: &apos;t1est&apos; } ]
+
+$ curl -d &apos;postparam=1&apos; http://localhost:8888/t1est?getparam=1ab
+There have been validation errors: [
+  { param: &apos;getparam&apos;, msg: &apos;Invalid getparam&apos;, value: &apos;1ab&apos; },
+  { param: &apos;urlparam&apos;, msg: &apos;Invalid urlparam&apos;, value: &apos;t1est&apos; } ]
+
+$ curl http://localhost:8888/test?getparam=1&amp;postparam=1
+There have been validation errors: [
+  { param: &apos;postparam&apos;, msg: &apos;Invalid postparam&apos;, value: undefined} ]
+</code></pre>
+<h2 id="middleware-opciones">Middleware (opciones)</h2>
+<ol>
+<li><p><strong>errorFormatter</strong></p>
+<pre><code class="lang-javascript">app.use(expressValidator({
+  errorFormatter: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">param, msg, value</span>) </span>{
+      <span class="hljs-keyword">var</span> namespace = param.split(<span class="hljs-string">&apos;.&apos;</span>)
+      , root    = namespace.shift()
+      , formParam = root;
+
+    <span class="hljs-keyword">while</span>(namespace.length) {
+      formParam += <span class="hljs-string">&apos;[&apos;</span> + namespace.shift() + <span class="hljs-string">&apos;]&apos;</span>;
+    }
+    <span class="hljs-keyword">return</span> {
+      param : formParam,
+      msg   : msg,
+      value : value
+    };
+  }
+}));
+</code></pre>
+</li>
+<li><p><strong>customValidators</strong></p>
+<pre><code class="lang-javascript">app.use(expressValidator({
+ customValidators: {
+    isArray: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Array</span>.isArray(value);
+    },
+    gte: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">param, num</span>) </span>{
+        <span class="hljs-keyword">return</span> param &gt;= num;
+    }
+ }
+}));
+
+req.checkBody(<span class="hljs-string">&apos;users&apos;</span>, <span class="hljs-string">&apos;Users must be an array&apos;</span>).isArray();
+req.checkQuery(<span class="hljs-string">&apos;time&apos;</span>, <span class="hljs-string">&apos;Time must be an integer great than or equal to 5&apos;</span>).isInt().gte(<span class="hljs-number">5</span>)
+</code></pre>
+</li>
+<li><p><strong>customSanitizers</strong></p>
+<pre><code class="lang-javascript">app.use(expressValidator({
+ customSanitizers: {
+    toSanitizeSomehow: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">value</span>) </span>{
+        <span class="hljs-keyword">var</span> newValue = value;<span class="hljs-comment">//some operations </span>
+        <span class="hljs-keyword">return</span> newValue;
+    },
+ }
+}));
+
+req.sanitize(<span class="hljs-string">&apos;address&apos;</span>).toSanitizeSomehow();
+</code></pre>
+</li>
+</ol>
+<h2 id="validaci&#xF3;n">Validaci&#xF3;n</h2>
+<ul>
+<li><h4 id="reqcheck">req.check();</h4>
+<pre><code class="lang-javascript">req.check(<span class="hljs-string">&apos;testparam&apos;</span>, <span class="hljs-string">&apos;Error Message&apos;</span>).notEmpty().isInt();
+req.check(<span class="hljs-string">&apos;testparam.child&apos;</span>, <span class="hljs-string">&apos;Error Message&apos;</span>).isInt(); <span class="hljs-comment">// find nested params </span>
+req.check([<span class="hljs-string">&apos;testparam&apos;</span>, <span class="hljs-string">&apos;child&apos;</span>], <span class="hljs-string">&apos;Error Message&apos;</span>).isInt(); <span class="hljs-comment">// find nested params</span>
+</code></pre>
+</li>
+<li><h4 id="reqassert">req.assert();</h4>
+<p>Alias de req.check();</p>
+</li>
+<li><h4 id="reqvalidate">req.validate();</h4>
+<p>Alias de req.check();</p>
+</li>
+<li><h4 id="reqcheckbody">req.checkBody();</h4>
+<p>Alias de req.check(); pero solo en req.body.</p>
+</li>
+<li><h4 id="reqcheckquery">req.checkQuery();</h4>
+<p>Alias de req.check(); pero solo en req.query.</p>
+</li>
+<li><h4 id="reqcheckparams">req.checkParams();</h4>
+<p>Alias de req.check(); pero solo en req.params.</p>
+</li>
+<li><h4 id="reqcheckheaders">req.checkHeaders();</h4>
+<p>Alias de req.check(); pero solo en req.headers.</p>
+</li>
+<li><h4 id="reqcheckcookies">req.checkCookies();</h4>
+<p>Alias de req.check(); pero solo en req.cookies.</p>
+</li>
+</ul>
+<h3 id="validaci&#xF3;n-mediante-un-schema">Validaci&#xF3;n mediante un Schema</h3>
+<p>Alternativamente, puede definir todas sus validaciones a la vez utilizando un esquema simple. La validaci&#xF3;n de esquema se utilizar&#xE1; si pasa un objeto a cualquiera de los m&#xE9;todos de validaci&#xF3;n.</p>
+<p>Puede pasar mensajes de error por validador con la clave errorMessage. Las opciones de validador se pueden pasar a trav&#xE9;s de la clave de opciones como una matriz cuando se necesitan varios valores, o como un solo valor no nulo de lo contrario.</p>
+<pre><code class="lang-javascript">req.checkBody({
+ <span class="hljs-string">&apos;email&apos;</span>: {
+    optional: {
+      options: { checkFalsy: <span class="hljs-literal">true</span> } <span class="hljs-comment">// or: [{ checkFalsy: true }] </span>
+    },
+    isEmail: {
+      errorMessage: <span class="hljs-string">&apos;Invalid Email&apos;</span>
+    }
+  },
+  <span class="hljs-string">&apos;password&apos;</span>: {
+    notEmpty: <span class="hljs-literal">true</span>,
+    matches: {
+      options: [<span class="hljs-string">&apos;example&apos;</span>, <span class="hljs-string">&apos;i&apos;</span>] <span class="hljs-comment">// pass options to the validator with the options property as an array </span>
+      <span class="hljs-comment">// options: [/example/i] // matches also accepts the full expression in the first parameter </span>
+    },
+    errorMessage: <span class="hljs-string">&apos;Invalid Password&apos;</span> <span class="hljs-comment">// Error message for the parameter </span>
+  },
+  <span class="hljs-string">&apos;name.first&apos;</span>: { <span class="hljs-comment">// </span>
+    optional: <span class="hljs-literal">true</span>, <span class="hljs-comment">// won&apos;t validate if field is empty </span>
+    isLength: {
+      options: [{ min: <span class="hljs-number">2</span>, max: <span class="hljs-number">10</span> }],
+      errorMessage: <span class="hljs-string">&apos;Must be between 2 and 10 chars long&apos;</span> <span class="hljs-comment">// Error message for the validator, takes precedent over parameter message </span>
+    },
+    errorMessage: <span class="hljs-string">&apos;Invalid First Name&apos;</span>
+  }
+});
+</code></pre>
+<p>Recuerde que el atributo in siempre tendr&#xE1; la prioridad m&#xE1;s alta. Esto significa que si utiliza en: &apos;query&apos;, entonces checkQuery () se llamar&#xE1; dentro incluso si hace checkParams () o checkBody (). Por ejemplo, todas estas llamadas comprobar&#xE1;n los par&#xE1;metros de consulta para el par&#xE1;metro de correo electr&#xF3;nico:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> schema = {
+ <span class="hljs-string">&apos;email&apos;</span>: {
+    <span class="hljs-keyword">in</span>: <span class="hljs-string">&apos;query&apos;</span>,
+    notEmpty: <span class="hljs-literal">true</span>,
+    isEmail: {
+      errorMessage: <span class="hljs-string">&apos;Invalid Email&apos;</span>
+    }
+  },
+  <span class="hljs-string">&apos;password&apos;</span>: {
+    notEmpty: <span class="hljs-literal">true</span>,
+    matches: {
+      options: [<span class="hljs-string">&apos;example&apos;</span>, <span class="hljs-string">&apos;i&apos;</span>] <span class="hljs-comment">// pass options to the validator with the options property as an array </span>
+      <span class="hljs-comment">// options: [/example/i] // matches also accepts the full expression in the first parameter </span>
+    },
+    errorMessage: <span class="hljs-string">&apos;Invalid Password&apos;</span> <span class="hljs-comment">// Error message for the parameter </span>
+  }
+};
+
+req.check(schema);        <span class="hljs-comment">// will check &apos;password&apos; no matter where it is but &apos;email&apos; in query params </span>
+req.checkQuery(schema);   <span class="hljs-comment">// will check &apos;password&apos; and &apos;email&apos; in query params </span>
+req.checkBody(schema);    <span class="hljs-comment">// will check &apos;password&apos; in body but &apos;email&apos; in query params </span>
+req.checkParams(schema);  <span class="hljs-comment">// will check &apos;password&apos; in path params but &apos;email&apos; in query params </span>
+req.checkHeaders(schema);  <span class="hljs-comment">// will check &apos;password&apos; in headers but &apos;email&apos; in query params</span>
+</code></pre>
+<h3 id="validaci&#xF3;n-del-resultado">Validaci&#xF3;n del resultado</h3>
+<pre><code class="lang-javascript">req.assert(<span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;required&apos;</span>).notEmpty();
+req.assert(<span class="hljs-string">&apos;email&apos;</span>, <span class="hljs-string">&apos;valid email required&apos;</span>).isEmail();
+req.assert(<span class="hljs-string">&apos;password&apos;</span>, <span class="hljs-string">&apos;6 to 20 characters required&apos;</span>).len(<span class="hljs-number">6</span>, <span class="hljs-number">20</span>);
+
+req.getValidationResult().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">result</span>) </span>{
+  <span class="hljs-comment">// do something with the validation result </span>
+});
+</code></pre>
+<p>Para ver todos los m&#xE9;todos que podemos utilizar ver la documentaci&#xF3;n del paquete <a href="https://www.npmjs.com/package/express-validator#reqassert" target="_blank">aqu&#xED;</a>.</p>
+<h1 id="express-session">Express-session</h1>
+<h2 id="instalaci&#xF3;n">Instalaci&#xF3;n</h2>
+<pre><code class="lang-shell">$ npm install express-sessions
+</code></pre>
+<h2 id="ejemplo-de-uso">Ejemplo de uso</h2>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> mongoose = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;mongoose&apos;</span>);
+
+mongoose.connect();
+
+app.use(express.session({
+    secret: <span class="hljs-string">&apos;a4f8071f-c873-4447-8ee2&apos;</span>,
+    cookie: { maxAge: <span class="hljs-number">2628000000</span> },
+    store: <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-sessions&apos;</span>))({
+        storage: <span class="hljs-string">&apos;mongodb&apos;</span>,
+        instance: mongoose, <span class="hljs-comment">// optional </span>
+        host: <span class="hljs-string">&apos;localhost&apos;</span>, <span class="hljs-comment">// optional </span>
+        port: <span class="hljs-number">27017</span>, <span class="hljs-comment">// optional </span>
+        db: <span class="hljs-string">&apos;test&apos;</span>, <span class="hljs-comment">// optional </span>
+        collection: <span class="hljs-string">&apos;sessions&apos;</span>, <span class="hljs-comment">// optional </span>
+        expire: <span class="hljs-number">86400</span> <span class="hljs-comment">// optional </span>
+    })
+}));
+</code></pre>
+<p>&#xF3;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> redis = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;redis&apos;</span>);
+<span class="hljs-keyword">var</span> client = redis.createClient(<span class="hljs-number">6379</span>, <span class="hljs-string">&apos;localhost&apos;</span>);
+
+app.use(express.session({
+    secret: <span class="hljs-string">&apos;a4f8071f-c873-4447-8ee2&apos;</span>,
+    cookie: { maxAge: <span class="hljs-number">2628000000</span> },
+    store: <span class="hljs-keyword">new</span> (<span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;express-sessions&apos;</span>))({
+        storage: <span class="hljs-string">&apos;redis&apos;</span>,
+        instance: client, <span class="hljs-comment">// optional </span>
+        host: <span class="hljs-string">&apos;localhost&apos;</span>, <span class="hljs-comment">// optional </span>
+        port: <span class="hljs-number">6379</span>, <span class="hljs-comment">// optional </span>
+        collection: <span class="hljs-string">&apos;sessions&apos;</span>, <span class="hljs-comment">// optional </span>
+        expire: <span class="hljs-number">86400</span> <span class="hljs-comment">// optional </span>
+    })
+}));
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sessions.html" class="navigation navigation-prev " aria-label="Previous page: Sessions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="auth.html" class="navigation navigation-next " aria-label="Next page: Session Authentication">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ExpressValidator","level":"1.15","depth":1,"next":{"title":"Session Authentication","level":"1.16","depth":1,"path":"Cap13/auth.md","ref":"Cap13/auth.md","articles":[]},"previous":{"title":"Sessions","level":"1.14","depth":1,"path":"Cap13/sessions.md","ref":"Cap13/sessions.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cap13/Express-Validator_Express-Session.md","mtime":"2017-03-29T14:25:50.807Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-29T14:30:28.473Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
