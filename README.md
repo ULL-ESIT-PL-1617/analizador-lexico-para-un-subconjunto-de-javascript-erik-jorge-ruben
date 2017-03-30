@@ -47,6 +47,6 @@ tokens.js produces an array of token objects from a string.
 
 | Nombre                       | Enlace |
 | ---------------------------- | ---------------------------------------- |
-| Jorge Alonso Hernández       | [Jorge]() |
+| Jorge Alonso Hernández       | [Jorge](https://frozen-reaches-47361.herokuapp.com/) |
 | Erik Andreas Barreto de Vera | [Erik]() |
 | Rubén Labrador Páez          | [Rubén](https://nalizadorpl.herokuapp.com/) |
