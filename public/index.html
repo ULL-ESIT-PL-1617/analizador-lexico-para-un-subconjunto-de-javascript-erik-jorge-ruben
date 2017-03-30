@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Práctica: Analizador léxico para un subonjunto de JavaScript</h1>
+      <ul>
+
+        <li id = "linkAnalizador"> </li>
+        <li id = "apuntesLibre">  </li>
+        <li id = "login"></li>
+        <li id = "logout"></li>
+        <li id = "apuntesLogin"></li>
+      </ul>
+
+      <script type="text/javascript">
+      var analizador = document.createElement("a")
+      analizador.href = document.location.href + "app";
+      analizador.innerHTML = "Analizador JavaScript";
+      document.getElementById('linkAnalizador').appendChild(analizador);
+      var apuntesLibre = document.createElement("a")
+      apuntesLibre.href = document.location.href + "book";
+      apuntesLibre.innerHTML = "Apuntes sin login";
+      document.getElementById('apuntesLibre').appendChild(apuntesLibre);
+      var login = document.createElement("a")
+      login.href = document.location.href + "login?username=amy&password=amyspassword";
+      login.innerHTML = "Login";
+      document.getElementById('login').appendChild(login);
+      var logout = document.createElement("a")
+      logout.href = document.location.href + "logout";
+      logout.innerHTML = "Logout";
+      document.getElementById('logout').appendChild(logout);
+      var apuntesLogin = document.createElement("a")
+      apuntesLogin.href = document.location.href + "content/book";
+      apuntesLogin.innerHTML = "Apuntos con login";
+      document.getElementById('apuntesLogin').appendChild(apuntesLogin);
+      </script>
+
+  </body>
+</html>

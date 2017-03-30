@@ -1,0 +1,36 @@
+{
+  "name": "libro-practicas",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-PL-1617/analizador-lexico-para-un-subconjunto-de-javascript-erik-jorge-ruben.git"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "cookie-session": "^2.0.0-alpha.3",
+    "cookie-signature": "^1.0.6",
+    "ejs": "^2.5.6",
+    "express-session": "^1.15.1",
+    "pbkdf2-password": "^1.2.1",
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "express": "~4.14.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.2",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^0.3.1",
+    "gitbook": "^2.1.0",
+    "gitbook-cli": "^0.3.4",
+    "gulp": "^3.9.1",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-shell": "^0.5.2"
+  }
+}

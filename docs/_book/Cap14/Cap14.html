@@ -1,0 +1,701 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Analizador léxico para un subconjunto JavaScript · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Cap13/auth.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introducción
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Cap1/GitBook.html">
+            
+                <a href="../Cap1/GitBook.html">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Cap2/Markdown.html">
+            
+                <a href="../Cap2/Markdown.html">
+            
+                    
+                    Markdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Cap3/Nodejs.html">
+            
+                <a href="../Cap3/Nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Cap4/Git-GitHub.html">
+            
+                <a href="../Cap4/Git-GitHub.html">
+            
+                    
+                    Git/GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Cap5/Atom.html">
+            
+                <a href="../Cap5/Atom.html">
+            
+                    
+                    Atom
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Cap6/Cloud9.html">
+            
+                <a href="../Cap6/Cloud9.html">
+            
+                    
+                    Cloud 9
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Cap7/Pandoc.html">
+            
+                <a href="../Cap7/Pandoc.html">
+            
+                    
+                    Pandoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Cap8/basic.html">
+            
+                <a href="../Cap8/basic.html">
+            
+                    
+                    Direccionamiento Básico
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Cap9/routing.html">
+            
+                <a href="../Cap9/routing.html">
+            
+                    
+                    Direccionamiento
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Cap10/middle.html">
+            
+                <a href="../Cap10/middle.html">
+            
+                    
+                    Middleware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Cap10/mw_aplicacion.html">
+            
+                <a href="../Cap10/mw_aplicacion.html">
+            
+                    
+                    Middleware de nivel de aplicación
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Cap10/mw_direccionador.html">
+            
+                <a href="../Cap10/mw_direccionador.html">
+            
+                    
+                    Middleware de nivel de direccionador
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Cap10/mw_errores.html">
+            
+                <a href="../Cap10/mw_errores.html">
+            
+                    
+                    Middleware de manejo de errores
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../Cap10/mw_incorporado.html">
+            
+                <a href="../Cap10/mw_incorporado.html">
+            
+                    
+                    Middleware incorporado
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../Cap10/mw_terceros.html">
+            
+                <a href="../Cap10/mw_terceros.html">
+            
+                    
+                    Middleware de terceros
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Cap11/routing-api.html">
+            
+                <a href="../Cap11/routing-api.html">
+            
+                    
+                    Express API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Cap12/cookie-parser.html">
+            
+                <a href="../Cap12/cookie-parser.html">
+            
+                    
+                    Cookies
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Cap13/sessions.html">
+            
+                <a href="../Cap13/sessions.html">
+            
+                    
+                    Sessions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Cap13/Express-Validator_Express-Session.html">
+            
+                <a href="../Cap13/Express-Validator_Express-Session.html">
+            
+                    
+                    ExpressValidator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../Cap13/auth.html">
+            
+                <a href="../Cap13/auth.html">
+            
+                    
+                    Session Authentication
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.17" data-path="Cap14.html">
+            
+                <a href="Cap14.html">
+            
+                    
+                    Analizador léxico para un subconjunto JavaScript
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Analizador léxico para un subconjunto JavaScript</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="analizador-l&#xE9;xico-para-un-subconjunto-de-javascript">Analizador l&#xE9;xico para un subconjunto de JavaScript</h1>
+<p>[TOC]</p>
+<h2 id="introducci&#xF3;n">Introducci&#xF3;n</h2>
+<p><strong>&#xBF;Qu&#xE9; es un analizador l&#xE9;xico?</strong></p>
+<p>Un analizador l&#xE9;xico y/o analizador lexicogr&#xE1;fico (en ingl&#xE9;s scanner) es la primera fase de un compilador consistente en un programa que recibe como entrada el c&#xF3;digo fuente de otro programa (secuencia de caracteres) y produce una salida compuesta de tokens (componentes l&#xE9;xicos) o s&#xED;mbolos. Estos tokens sirven para una posterior etapa del proceso de traducci&#xF3;n, siendo la entrada para el analizador sint&#xE1;ctico (en ingl&#xE9;s parser).</p>
+<p>La especificaci&#xF3;n de un lenguaje de programaci&#xF3;n a menudo incluye un conjunto de reglas que definen el l&#xE9;xico. Estas reglas consisten com&#xFA;nmente en expresiones regulares que indican el conjunto de posibles secuencias de caracteres que definen un token o lexema.</p>
+<p>En algunos lenguajes de programaci&#xF3;n es necesario establecer patrones para caracteres especiales (como el espacio en blanco) que la gram&#xE1;tica pueda reconocer sin que constituya un token en s&#xED;.</p>
+<p><strong>&#xBF;Qu&#xE9; es un analizador sint&#xE1;ctico?</strong></p>
+<p>Un analizador sint&#xE1;ctico (o parser) es una de las partes de un compilador que transforma su entrada en un &#xE1;rbol de derivaci&#xF3;n.</p>
+<p>El an&#xE1;lisis sint&#xE1;ctico convierte el texto de entrada en otras estructuras (com&#xFA;nmente &#xE1;rboles), que son m&#xE1;s &#xFA;tiles para el posterior an&#xE1;lisis y capturan la jerarqu&#xED;a impl&#xED;cita de la entrada. Un analizador l&#xE9;xico crea tokens de una secuencia de caracteres de entrada y son estos tokens los que son procesados por el analizador sint&#xE1;ctico para construir la estructura de datos.</p>
+<p>El siguiente caso demuestra un caso com&#xFA;n de an&#xE1;lisis de un lenguaje de programaci&#xF3;n con dos niveles de gram&#xE1;tica, l&#xE9;xica y sint&#xE1;ctica.</p>
+<p>El primer estado es la generaci&#xF3;n de tokens o an&#xE1;lisis l&#xE9;xico, en este proceso la cadena de entrada se parte en s&#xED;mbolos con significado definidos por una gram&#xE1;tica de expresiones regulares, por ejemplo un programa calculadora con la siguiente entrada: &quot;12<em>(3+4)^2&quot;, la dividir&#xED;a en los siguientes tokens 12, </em>, (, 3, +, 4, ), ^ y 2, cada uno de estos s&#xED;mbolos tiene un significado en el contexto de la expresi&#xF3;n aritm&#xE9;tica. El analizador contendr&#xE1; reglas para indicar que los s&#xED;mbolos *, +, ^, ( y ) indican el comienzo de un nuevo token, de modo que otros tokens que no tendr&#xED;an sentido como 12 o 13 no se generar&#xE1;n.</p>
+<p>El siguiente estado es el an&#xE1;lisis sint&#xE1;ctico lo que significa comprobar que los tokens forman una expresi&#xF3;n v&#xE1;lida, esto se hace usualmente usando una gram&#xE1;tica.</p>
+<p><strong>Clasificaci&#xF3;n</strong></p>
+<ul>
+<li>Analizador sint&#xE1;ctico descendente (<em>Top-Down-Parser</em>): ..un analizador puede empezar con el s&#xED;mbolo inicial e intentar transformarlo en la entrada, intuitivamente esto ser&#xED;a ir dividiendo la entrada progresivamente en partes cada vez m&#xE1;s peque&#xF1;as.</li>
+<li>Analizador sint&#xE1;ctico ascendente (<em>Bottom-Up-Parser</em>): un analizador puede empezar con la entrada e intentar llegar hasta el s&#xED;mbolo inicial, intuitivamente el analizador intenta encontrar los s&#xED;mbolos m&#xE1;s peque&#xF1;os y progresivamente construir la jerarqu&#xED;a de s&#xED;mbolos hasta el inicial.</li>
+</ul>
+<p>Ve&#xE1;mos la soluci&#xF3;n propuesta por el profesor c&#xF3;mo funciona a continuaci&#xF3;n.</p>
+<h2 id="comprobando-las-expresiones-regulares">Comprobando las expresiones regulares</h2>
+<ol>
+<li><h3 id="espacios-en-blanco">Espacios en blanco</h3>
+<p><img src="img/1.png" alt=""></p>
+</li>
+<li><h3 id="identificador">Identificador</h3>
+<p><img src="img/2.png" alt=""></p>
+</li>
+<li><h3 id="n&#xFA;meros">N&#xFA;meros</h3>
+<p><img src="img/3.png" alt=""></p>
+</li>
+<li><h3 id="cadenas">Cadenas</h3>
+<p><img src="img/4.png" alt=""></p>
+</li>
+<li><h3 id="comentarios-de-una-l&#xED;nea">Comentarios de una l&#xED;nea</h3>
+<p><img src="img/5.png" alt=""></p>
+</li>
+<li><h3 id="comentarios-de-varias-l&#xED;neas">Comentarios de varias l&#xED;neas</h3>
+<p><img src="img/6.png" alt=""></p>
+</li>
+<li><h3 id="operadores-de-un-s&#xF3;lo-car&#xE1;cter">Operadores de un s&#xF3;lo car&#xE1;cter</h3>
+<p><img src="img/7.png" alt=""></p>
+</li>
+<li><h3 id="operadores-de-varios-caracteres">Operadores de varios caracteres</h3>
+<p><img src="img/8.png" alt=""></p>
+</li>
+</ol>
+<h2 id="&#xBF;c&#xF3;mo-funciona-el-analizador">&#xBF;C&#xF3;mo funciona el analizador?</h2>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* 
+* Versi&#xF3;n original
+*/</span>
+<span class="hljs-built_in">String</span>.prototype.tokens = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">prefix, suffix</span>) </span>{
+<span class="hljs-meta">    &apos;use strict&apos;</span>;
+    <span class="hljs-keyword">var</span> c;                      <span class="hljs-comment">// The current character.</span>
+    <span class="hljs-keyword">var</span> <span class="hljs-keyword">from</span>;                   <span class="hljs-comment">// The index of the start of the token.</span>
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;                  <span class="hljs-comment">// The index of the current character.</span>
+    <span class="hljs-keyword">var</span> length = <span class="hljs-keyword">this</span>.length;
+    <span class="hljs-keyword">var</span> n;                      <span class="hljs-comment">// The number value.</span>
+    <span class="hljs-keyword">var</span> q;                      <span class="hljs-comment">// The quote character.</span>
+    <span class="hljs-keyword">var</span> str;                    <span class="hljs-comment">// The string value.</span>
+
+    <span class="hljs-keyword">var</span> result = [];            <span class="hljs-comment">// An array to hold the results.</span>
+
+    <span class="hljs-keyword">var</span> make = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">type, value</span>) </span>{
+
+<span class="hljs-comment">// Make a token object.</span>
+
+        <span class="hljs-keyword">return</span> {
+            type: type,
+            value: value,
+            <span class="hljs-keyword">from</span>: <span class="hljs-keyword">from</span>,
+            to: i
+        };
+    };
+
+      <span class="hljs-comment">// ...</span>
+}
+</code></pre>
+<p>En la versi&#xF3;n original el programa va leyendo la entrada car&#xE1;cter a car&#xE1;cter analizando el token mediante reglas, para ello se requeria de variables como <em>c</em> para indicar si lo que lee es un car&#xE1;cter, <em>n</em>  para saber si era un numero, etc.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> c;                      <span class="hljs-comment">// The current character.</span>
+<span class="hljs-keyword">var</span> <span class="hljs-keyword">from</span>;                   <span class="hljs-comment">// The index of the start of the token.</span>
+<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;                  <span class="hljs-comment">// The index of the current character.</span>
+<span class="hljs-keyword">var</span> length = <span class="hljs-keyword">this</span>.length;
+<span class="hljs-keyword">var</span> n;                      <span class="hljs-comment">// The number value.</span>
+<span class="hljs-keyword">var</span> q;                      <span class="hljs-comment">// The quote character.</span>
+<span class="hljs-keyword">var</span> str;                    <span class="hljs-comment">// The string value.</span>
+</code></pre>
+<p>Por el contrario, en la versi&#xF3;n propuesta simplemente hacemos uso de una variable <em>m</em> que muestra con que expresi&#xF3;n regular caza la entrada.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/*
+* Soluci&#xF3;n propuesta usando expresiones regulares
+*/</span>
+
+<span class="hljs-built_in">String</span>.prototype.tokens = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> <span class="hljs-keyword">from</span>;                   <span class="hljs-comment">// The index of the start of the token.</span>
+    <span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>;                  <span class="hljs-comment">// The index of the current character.</span>
+    <span class="hljs-keyword">var</span> n;                      <span class="hljs-comment">// The number value.</span>
+    <span class="hljs-keyword">var</span> m;                      <span class="hljs-comment">// Matching</span>
+    <span class="hljs-keyword">var</span> result = [];            <span class="hljs-comment">// An array to hold the results.</span>
+
+    <span class="hljs-keyword">var</span> WHITES              = <span class="hljs-regexp">/\s+/g</span>;
+    <span class="hljs-keyword">var</span> ID                  = <span class="hljs-regexp">/[a-zA-Z_]\w*/g</span>;
+    <span class="hljs-keyword">var</span> NUM                 = <span class="hljs-regexp">/\b\d+(\.\d*)?([eE][+-]?\d+)?\b/g</span>;
+    <span class="hljs-keyword">var</span> STRING              = <span class="hljs-regexp">/(&apos;(\\.|[^&apos;])*&apos;|&quot;(\\.|[^&quot;])*&quot;)/g</span>;
+    <span class="hljs-keyword">var</span> ONELINECOMMENT      = <span class="hljs-regexp">/\/\/.*/g</span>;
+    <span class="hljs-keyword">var</span> MULTIPLELINECOMMENT = <span class="hljs-regexp">/\/[*](.|\n)*?[*]\//g</span>;
+    <span class="hljs-keyword">var</span> TWOCHAROPERATORS    = <span class="hljs-regexp">/(===|!==|[+][+=]|-[-=]|=[=&lt;&gt;]|[&lt;&gt;][=&lt;&gt;]|&amp;&amp;|[|][|])/g</span>;
+    <span class="hljs-keyword">var</span> ONECHAROPERATORS    = <span class="hljs-regexp">/([-+*\/=()&amp;|;:,&lt;&gt;{}[\]])/g</span>; <span class="hljs-comment">// May be some character is missing?</span>
+    <span class="hljs-keyword">var</span> tokens = [WHITES, ID, NUM, STRING, ONELINECOMMENT, 
+                  MULTIPLELINECOMMENT, TWOCHAROPERATORS, ONECHAROPERATORS ];
+
+
+    <span class="hljs-comment">// Make a token object.</span>
+    <span class="hljs-keyword">var</span> make = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">type, value</span>) </span>{
+        <span class="hljs-keyword">return</span> {
+            type: type,
+            value: value,
+            <span class="hljs-keyword">from</span>: <span class="hljs-keyword">from</span>,
+            to: i
+        };
+    };
+
+  <span class="hljs-comment">//...</span>
+}
+</code></pre>
+<p>Veamos ahora alguna de las reglas que usa la versi&#xF3;n original para ignorar los espacios en blanco:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Ignore whitespace.</span>
+
+        <span class="hljs-keyword">if</span> (c &lt;= <span class="hljs-string">&apos; &apos;</span>) {
+            i += <span class="hljs-number">1</span>;
+            c = <span class="hljs-keyword">this</span>.charAt(i);
+</code></pre>
+<p>Como vemos lo que hace es simplemente comparar el s&#xED;mbolo de entrada con el de un car&#xE1;cter blanco y si lo es avanza en uno la entrada. Sin embargo ve&#xE1;mos la nueva soluci&#xF3;n como ser&#xED;a:</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Ignore whitespace and comments</span>
+        <span class="hljs-keyword">if</span> (m = WHITES.bexec(<span class="hljs-keyword">this</span>) || 
+           (m = ONELINECOMMENT.bexec(<span class="hljs-keyword">this</span>))  || 
+           (m = MULTIPLELINECOMMENT.bexec(<span class="hljs-keyword">this</span>))) { getTok(); }
+</code></pre>
+<p>s&#xF3;lo corresponder&#xED;a con la primera condici&#xF3;n del <em>if</em> pero se ve claramente que lo que hace es cazar la entrada con una expresi&#xF3;n regular que reconoce los espacios en blanco.</p>
+<p>Del mismo modo funciona para reconocer los dem&#xE1;s tokens, ve&#xE1;mos las diferencias...</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">/* 
+* Versi&#xF3;n original
+*/</span>
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-comment">// number.</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m = NUM.bexec(<span class="hljs-keyword">this</span>)) {
+            n = +getTok();
+
+            <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isFinite</span>(n)) {
+                result.push(make(<span class="hljs-string">&apos;number&apos;</span>, n));
+            } <span class="hljs-keyword">else</span> {
+                make(<span class="hljs-string">&apos;number&apos;</span>, m[<span class="hljs-number">0</span>]).error(<span class="hljs-string">&quot;Bad number&quot;</span>);
+            }
+        } 
+        <span class="hljs-comment">// string</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m = STRING.bexec(<span class="hljs-keyword">this</span>)) {
+            result.push(make(<span class="hljs-string">&apos;string&apos;</span>, getTok().replace(<span class="hljs-regexp">/^[&quot;&apos;]|[&quot;&apos;]$/g</span>,<span class="hljs-string">&apos;&apos;</span>)));
+        } 
+        <span class="hljs-comment">// two char operator</span>
+        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m = TWOCHAROPERATORS.bexec(<span class="hljs-keyword">this</span>)) {
+            result.push(make(<span class="hljs-string">&apos;operator&apos;</span>, getTok()));
+        <span class="hljs-comment">// single-character operator</span>
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (m = ONECHAROPERATORS.bexec(<span class="hljs-keyword">this</span>)){
+            result.push(make(<span class="hljs-string">&apos;operator&apos;</span>, getTok()));
+        } <span class="hljs-keyword">else</span> {
+          <span class="hljs-keyword">throw</span> <span class="hljs-string">&quot;Syntax error near &apos;&quot;</span>+<span class="hljs-keyword">this</span>.substr(i)+<span class="hljs-string">&quot;&apos;&quot;</span>;
+        }
+        <span class="hljs-comment">//...</span>
+
+
+<span class="hljs-comment">/*
+* Soluci&#xF3;n propuesta usando expresiones regulares
+*/</span>
+
+        <span class="hljs-comment">//...</span>
+        <span class="hljs-comment">// name.</span>
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> ((c &gt;= <span class="hljs-string">&apos;a&apos;</span> &amp;&amp; c &lt;= <span class="hljs-string">&apos;z&apos;</span>) || (c &gt;= <span class="hljs-string">&apos;A&apos;</span> &amp;&amp; c &lt;= <span class="hljs-string">&apos;Z&apos;</span>)) {
+          str = c;
+          i += <span class="hljs-number">1</span>;
+          <span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) {
+            c = <span class="hljs-keyword">this</span>.charAt(i);
+            <span class="hljs-keyword">if</span> ((c &gt;= <span class="hljs-string">&apos;a&apos;</span> &amp;&amp; c &lt;= <span class="hljs-string">&apos;z&apos;</span>) || (c &gt;= <span class="hljs-string">&apos;A&apos;</span> &amp;&amp; c &lt;= <span class="hljs-string">&apos;Z&apos;</span>) ||
+                (c &gt;= <span class="hljs-string">&apos;0&apos;</span> &amp;&amp; c &lt;= <span class="hljs-string">&apos;9&apos;</span>) || c === <span class="hljs-string">&apos;_&apos;</span>) {
+              str += c;
+              i += <span class="hljs-number">1</span>;
+            } <span class="hljs-keyword">else</span> {
+              <span class="hljs-keyword">break</span>;
+            }
+          }
+          result.push(make(<span class="hljs-string">&apos;name&apos;</span>, str));
+        <span class="hljs-comment">//...</span>
+</code></pre>
+<h2 id="referencias">Referencias</h2>
+<p><a href="https://es.wikipedia.org/wiki/Analizador_l%C3%A9xico" target="_blank"></a></p>
+<p><a href="https://github.com/douglascrockford/TDOP/blob/master/tokens.js" target="_blank"></a></p>
+<p><a href="https://github.com/crguezl/ull-etsii-grado-pl-minijavascript/blob/gh-pages/tokens.js" target="_blank"></a></p>
+<p><a href="https://regex101.com/" target="_blank"></a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Cap13/auth.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Session Authentication">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Analizador léxico para un subconjunto JavaScript","level":"1.17","depth":1,"previous":{"title":"Session Authentication","level":"1.16","depth":1,"path":"Cap13/auth.md","ref":"Cap13/auth.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Cap14/Cap14.md","mtime":"2017-03-29T14:48:28.871Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-03-29T14:50:23.092Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
