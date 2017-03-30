@@ -42,29 +42,11 @@ tokens.js produces an array of token objects from a string.
 | Erik Andreas Barreto de Vera | [Erik](https://campusvirtual.ull.es/1617/user/view.php?id=18906&course=1148) | [alu0100774054](https://github.com/alu0100774054) |
 | Rubén Labrador Páez          | [Rubén](https://campusvirtual.ull.es/1617/user/view.php?id=9476&course=1148) | [alu0100309553](https://github.com/alu0100309553) |
 
-## Despliegues
 
-### Heroku
+## Despliegue Heroku
 
 | Nombre                       | Enlace |
 | ---------------------------- | ---------------------------------------- |
 | Jorge Alonso Hernández       | [Jorge]() |
 | Erik Andreas Barreto de Vera | [Erik]() |
-| Rubén Labrador Páez          | [Rubén]() |
-
-
-### IAAS
-
-| Nombre                       | Enlace |                
-| ---------------------------- | ---------------------------------------- |
-| Jorge Alonso Hernández       | [Jorge]() |
-| Erik Andreas Barreto de Vera | [Erik]() |
-| Rubén Labrador Páez          | [Rubén]() |
-
-### Gitbook
-
-| Nombre                       | Enlace |                   
-| ---------------------------- | ---------------------------------------- |
-| Jorge Alonso Hernández       | [Jorge]() |
-| Erik Andreas Barreto de Vera | [Erik]() |
-| Rubén Labrador Páez          | [Rubén]() |
+| Rubén Labrador Páez          | [Rubén](https://nalizadorpl.herokuapp.com/) |
