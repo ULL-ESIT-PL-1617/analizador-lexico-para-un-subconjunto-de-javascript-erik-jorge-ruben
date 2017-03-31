@@ -27,5 +27,5 @@
 | Nombre                       | Enlace |
 | ---------------------------- | ---------------------------------------- |
 | Jorge Alonso Hernández       | [Jorge](https://frozen-reaches-47361.herokuapp.com/) |
-| Erik Andreas Barreto de Vera | [Erik]() |
+| Erik Andreas Barreto de Vera | [Erik](https://hidden-forest-63888.herokuapp.com/) |
 | Rubén Labrador Páez          | [Rubén](https://nalizadorpl.herokuapp.com/) |
